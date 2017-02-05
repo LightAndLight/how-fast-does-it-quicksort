@@ -9,6 +9,7 @@ Results (8000 elements, already sorted, run on Surface Pro 3 with 64-bit Windows
 | Language | Time |
 | --- | --- |
 | Rust | 0.035s |
+| Swift | 0.041s |
 | Haskell | 1.4s |
 | Python | 9.5s |
 
