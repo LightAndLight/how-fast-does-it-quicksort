@@ -9,29 +9,19 @@ fn qs<T : PartialOrd + Copy>(a: &mut Vec<T>, lo: usize, hi: usize) {
     let mut stack = Vec::new();
     stack.push(lo);
     stack.push(hi);
-    loop {
-        let opt_hi = stack.pop();
-        match opt_hi {
-            Some(hi) => {
-                let opt_lo = stack.pop();
-                match opt_lo {
-                    Some(lo) => {
-                        if lo < hi {
-                            let p = partition(a, lo, hi);
-                            stack.push(p + 1);
-                            stack.push(hi);
+    while let Some(hi) = stack.pop() {
+        if let Some(lo) = stack.pop() {
+            if lo < hi {
+                let p = partition(a, lo, hi);
+                stack.push(p + 1);
+                stack.push(hi);
 
-                            let (res, overflowed) = p.overflowing_sub(1);
-                            if !overflowed {
-                                stack.push(lo);
-                                stack.push(res);
-                            }
-                        }
-                    },
-                    None => break
+                let (res, overflowed) = p.overflowing_sub(1);
+                if !overflowed {
+                    stack.push(lo);
+                    stack.push(res);
                 }
-            },
-            None => break
+            }
         }
     }
 }
