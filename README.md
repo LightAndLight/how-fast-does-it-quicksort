@@ -4,7 +4,7 @@ I created this because I wanted to test the performance of the canonical
 in-place quicksort implementation in Haskell. I wrote equivalent Rust and Python
 implementations for reference.
 
-Results (8000 elements, already sorted):
+Results (8000 elements, already sorted, run on Surface Pro 3 with 64-bit Windows):
 
 | Language | Time |
 | --- | --- |
