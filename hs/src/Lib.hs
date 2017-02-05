@@ -4,12 +4,11 @@ import           Control.Applicative
 import           Control.Monad
 import           Control.Monad.ST
 import           Data.Foldable
-import           Data.IORef
 import           Data.STRef
 import           Data.Traversable
 import           Data.Vector         (Vector)
 import qualified Data.Vector         as V
-import           Data.Vector.Mutable (IOVector, STVector)
+import           Data.Vector.Mutable (STVector)
 import qualified Data.Vector.Mutable as M
 
 quicksort :: Ord a => Vector a -> Vector a
