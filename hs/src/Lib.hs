@@ -39,11 +39,3 @@ quicksort input = runST $ do
       M.write a i_value =<< M.read a hi
       M.write a hi a_i
       pure i_value
-
-quicksortF :: Ord a => Vector a -> Vector a
-quicksortF input
-  | V.null input = input
-  | otherwise
-    = let initInput = V.init input
-          lastInput = V.last input
-      in quicksortF (V.filter (<= lastInput) initInput) V.++ V.cons lastInput (quicksortF $ V.filter (> lastInput) initInput)
