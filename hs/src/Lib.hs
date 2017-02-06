@@ -6,12 +6,11 @@ import           Control.Applicative
 import           Control.Monad
 import           Control.Monad.ST
 import           Data.Foldable
-import           Data.IORef
 import           Data.STRef
 import           Data.Traversable
 import           Data.Vector         (Vector)
 import qualified Data.Vector         as V
-import           Data.Vector.Mutable (IOVector, STVector)
+import           Data.Vector.Mutable (STVector)
 import qualified Data.Vector.Mutable as M
 
 forST_ :: (Ord a, Enum a) => a -> a -> (a -> ST s ()) -> ST s ()
@@ -53,4 +52,5 @@ quicksort input = runST $ do
       i_value <- readSTRef i
       M.write a i_value =<< M.read a hi
       M.write a hi a_i
+      pure i_value
       pure i_value
