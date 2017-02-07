@@ -1,3 +1,4 @@
 hs/.stack-work
 rs/cargo.lock
 rs/target
+/.idea
