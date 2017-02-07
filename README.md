@@ -8,6 +8,7 @@ Results (8000 elements, already sorted, run on Surface Pro 3 with 64-bit Windows
 
 | Language | Time |
 | --- | --- |
+| C | 0.018s |
 | Rust | 0.035s |
 | Haskell | 1.4s |
 | PHP 7.0 | 2.8s |
