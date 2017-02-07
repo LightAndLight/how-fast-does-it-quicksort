@@ -10,7 +10,7 @@ Results (8000 elements, already sorted, run on Surface Pro 3 with 64-bit Windows
 | --- | --- |
 | Rust | 0.035s |
 | Haskell | 1.4s |
-| PHP 7.0 | 2.2s |
+| PHP 7.0 | 2.8s |
 | Python | 9.5s |
 
 # Want to contribute?
